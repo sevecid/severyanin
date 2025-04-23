@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Северянин</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function showSection(id) {
+      document.getElementById("contacts").style.display = "none";
+      document.getElementById("about").style.display = "none";
+      document.getElementById(id).style.display = "block";
+    }
+
+    window.onload = function() {
+      document.getElementById("contacts").style.display = "none";
+      document.getElementById("about").style.display = "none";
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">СЕВЕРЯНИН</div>
+    <nav>
+      <a href="#projects">Проекты</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Проекты -->
+    <section id="projects">
+      <h2>Проекты</h2>
+      <div class="card">
+        <h3>SUICIDAL TENDENCIES</h3>
+        <p>Я — автор проекта «Suicidal Tendencies», Телеграм-сообщество для нестандартных личностей.</p>
+        <a class="button" href="https://t.me/+jHmt-Wl9hbUzY2Ri" target="_blank">Перейти</a>
+      </div>
+    </section>
+
+    <!-- Кнопки Контакты / Обо мне -->
+    <div class="section-buttons">
+      <button class="button big" onclick="showSection('contacts')">Контакты</button>
+      <button class="button big" onclick="showSection('about')">Обо мне</button>
+    </div>
+
+    <!-- Контакты -->
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <div class="card">
+        <p>Личные сообщения</p>
+        <a class="button" href="https://t.me/sevecid" target="_blank">Перейти</a>
+      </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about">
+      <h2>Обо мне</h2>
+      <div class="card">
+        <p>
+          Я — автор проекта «Suicidal Tendencies» и создатель платформы «Северянин».
+          Иду против течения, создаю пространство для самовыражения, честности и личных границ.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
